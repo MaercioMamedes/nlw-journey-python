@@ -5,7 +5,7 @@ from sqlite3 import Connection
 
 class DbConnectionHandler:
     def __init__(self) -> None:
-        self.__connection_string = "storage.db"
+        self.__connection_string = ":memory:"
         self.__conn = None
 
     def connect(self) -> None:
@@ -30,4 +30,4 @@ class DbConnectionHandler:
         return self.__conn
 
 
-db_connection_handler = DbConnectionHandler()
+db_connection_handler_mock = DbConnectionHandler()
