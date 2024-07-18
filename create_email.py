@@ -1,7 +1,7 @@
 import requests
 
 payload = {
-    "requestor": "YourNameOrAppName",
+    "requestor": "email_teste",
     "version": "1.0"
 }
 response = requests.post('https://api.nodemailer.com/user', json=payload)
