@@ -2,6 +2,7 @@ from typing import Dict
 from src.drivers.email_sender import send_email
 import uuid
 
+
 class TripCreator:
     def __init__(self, trip_repository, emails_repository) -> None:
         self.__trip_repository = trip_repository
@@ -12,7 +13,7 @@ class TripCreator:
             emails = body.get("emails_to_invite")
 
             trip_id = str(uuid.uuid4())
-            trip_infos = { **body, "id": trip_id }
+            trip_infos = {**body, "id": trip_id}
 
             self.__trip_repository.create_trip(trip_infos)
 

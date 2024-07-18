@@ -1,5 +1,6 @@
 from typing import Dict
 
+
 class TripFinder:
     def __init__(self, trips_repository) -> None:
         self.__trips_repository = trips_repository
@@ -23,6 +24,6 @@ class TripFinder:
             }
         except Exception as exception:
             return {
-                "body": { "error": "Bad Request", "message": str(exception) },
+                "body": {"error": "Bad Request", "message": str(exception)},
                 "status_code": 400
             }

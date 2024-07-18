@@ -1,5 +1,6 @@
 from typing import Dict
 
+
 class ParticipantFinder:
     def __init__(self, participants_repository) -> None:
         self.__participants_repository = participants_repository
@@ -23,6 +24,6 @@ class ParticipantFinder:
             }
         except Exception as exception:
             return {
-                "body": { "error": "Bad Request", "message": str(exception) },
+                "body": {"error": "Bad Request", "message": str(exception)},
                 "status_code": 400
             }

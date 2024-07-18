@@ -1,8 +1,4 @@
-import os
-import tempfile
-
-import pytest
-from src.main.server.server import app
+from server import app
 # from flaskr import create_app
 # from .flaskr import get_db, init_db
 
