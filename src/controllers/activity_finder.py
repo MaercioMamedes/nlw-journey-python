@@ -1,5 +1,6 @@
 from typing import Dict
 
+
 class ActivityFinder:
     def __init__(self, activities_repository) -> None:
         self.__activities_repository = activities_repository
@@ -17,11 +18,11 @@ class ActivityFinder:
                 })
             
             return {
-                "body": { "activities": formatted_activities },
+                "body": {"activities": formatted_activities},
                 "status_code": 200
             }
         except Exception as exception:
             return {
-                "body": { "error": "Bad Request", "message": str(exception) },
+                "body": {"error": "Bad Request", "message": str(exception)},
                 "status_code": 400
             }

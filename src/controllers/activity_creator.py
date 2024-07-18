@@ -1,6 +1,7 @@
 import uuid
 from typing import Dict
 
+
 class ActivityCreator:
     def __init__(self, activities_repository) -> None:
         self.__activities_repository = activities_repository
@@ -16,11 +17,11 @@ class ActivityCreator:
             }
             self.__activities_repository.registry_activity(activities_infos)
             return {
-                "body": { "activityId": id },
+                "body": {"activityId": id},
                 "status_code": 201
             }
         except Exception as exception:
             return {
-                "body": { "error": "Bad Request", "message": str(exception) },
+                "body": {"error": "Bad Request", "message": str(exception)},
                 "status_code": 400
             }

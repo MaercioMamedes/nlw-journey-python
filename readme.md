@@ -1,9 +1,17 @@
 # NLW Journey Python
 ## Uma aplicação backend para gerenciar roteiros de viagens
 
+### Apresentação
+
+Esse projeto tem como principais objetivos, intenções educacionais, principalmente no sentido aspecto de implementação de uma API
+Web. Ele é o resultado de uma formção técnica oferecida pela Plataforma de ensino de tecnologia [Rocketseat](https://www.rocketseat.com.br/).
+
+Este repositório, é um fork do projeto desenvolvido pelo instrutor do curso, porém estou implentando algumas modificações
+em relação à arquitetura e boas práticas. Novas funcionalidades não serão implementadas.
+
 ### Descrição
 
-O projeto Journey tem como objetivo ajudar o usuário a organizar viagens à trabalho ou lazer. O usuário pode criar uma
+O projeto Journey ajuda o usuário a organizar viagens à trabalho ou lazer. O usuário pode criar uma
 viagem com nome, data de início e fim. Dentro da viagem o usuário pode planejar sua viagem adicionando atividades para 
 realizar em cada dia.
 
@@ -23,3 +31,5 @@ realizar em cada dia.
 
 
 ### [Documentação da API como referência](https://nlw-journey.apidocumentation.com/reference)
+
+### Building

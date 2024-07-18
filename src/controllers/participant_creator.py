@@ -1,6 +1,7 @@
 import uuid
 from typing import Dict
 
+
 class ParticipantCreator:
     def __init__(self, participants_repository, emails_repository) -> None:
         self.__participants_repository = participants_repository
@@ -28,11 +29,11 @@ class ParticipantCreator:
             self.__participants_repository.registry_participant(participant_infos)
             
             return {
-                "body": { "participant_id": participant_id },
+                "body": {"participant_id": participant_id},
                 "status_code": 201
             }
         except Exception as exception:
             return {
-                "body": { "error": "Bad Request", "message": str(exception) },
+                "body": {"error": "Bad Request", "message": str(exception)},
                 "status_code": 400
             }

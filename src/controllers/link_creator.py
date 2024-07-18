@@ -1,6 +1,7 @@
 from typing import Dict
 import uuid
 
+
 class LinkCreator:
     def __init__(self, link_repository) -> None:
         self.__link_repository = link_repository
