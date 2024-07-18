@@ -177,3 +177,4 @@ pyrightconfig.json
 
 # database
 *.db
+data_email_test.json
