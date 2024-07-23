@@ -1,14 +1,14 @@
-from server import app
-# from flaskr import create_app
-# from .flaskr import get_db, init_db
+import os
+import tempfile
 
-"""dirname = os.path.dirname(os.path.realpath(__name__))
-sql_file_path = dirname + '/init/schema.sql'
+import pytest
+from src.server.server import create_app
+from src.models.settings.db import get_db, init_db
 
-with open(sql_file_path, 'rb') as f:
-    _data_sql = f.read().decode('utf8')"""
+with open(os.path.join(os.path.dirname(__file__), 'data.sql'), 'rb') as f:
+    _data_sql = f.read().decode('utf8')
 
-"""
+
 @pytest.fixture
 def app():
     db_fd, db_path = tempfile.mkstemp()
@@ -26,14 +26,16 @@ def app():
 
     os.close(db_fd)
     os.unlink(db_path)
-"""
 
 
-# @pytest.fixture
-def client():
+@pytest.fixture
+def client(app):
     return app.test_client()
 
 
-"""@pytest.fixture
+@pytest.fixture
 def runner(app):
-    return app.test_cli_runner()"""
+    return app.test_cli_runner()
+
+
+

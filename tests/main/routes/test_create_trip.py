@@ -1,4 +1,4 @@
-from tests.settings.conftest import client
+from tests.settings.conftest2 import client
 
 
 def test_create_trip(client):
